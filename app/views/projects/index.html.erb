@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">State: </label>
-            <%= select(:state, :state_id, [['Proposal', 1], ['In progress', 2], ['Done',3]]) %>
+            <%= select(:state, :state_id, [['Proposal', 1], ['In progress', 2], ['Done',3]], selected: "1") %>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
