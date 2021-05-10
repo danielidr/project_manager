@@ -1,2 +1,26 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="container my-4">
+    <h1 class="mb-4">New Project</h1>
+        <form method="get" action="create">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Name</label>
+            <input name="name" type="text" class="form-control" id="formGroupExampleInput">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="start_date">Start date:</label>
+            <input type="date" id="bday" name="start_date">
+        </div>
+        <div class="form-group">
+            <label for="end_date">End date:</label>
+            <input type="date" id="bday" name="end_date">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">State: </label>
+            <%= select(:state, :state_id, [['Proposal', 1], ['In progress', 2], ['Done',3]]) %>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
