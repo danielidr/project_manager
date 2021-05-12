@@ -1,2 +1,23 @@
-<h1>Projects#dashboard</h1>
-<p>Find me in app/views/projects/dashboard.html.erb</p>
+<div class="container my-4">
+    <h1 class="mb-4">Projects</h1>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>State</th>
+        </tr>
+        </thead>
+        <% @projects.each do |p| %>
+            <tr>
+                <td><%= p.name %> </td>
+                <td><%= p.description %> </td>
+                <td><%= p.start_date %> </td>
+                <td><%= p.end_date %> </td>
+                <td><%= p.state %> </td>
+            </tr>
+        <% end %>
+    </table>
+</div>
