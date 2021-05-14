@@ -8,7 +8,12 @@ class ProjectsController < ApplicationController
   end
 
   def dashboard
-    @projects = Project.all
+    if params[:state1].present? && params[:state1] == 'Scheduled'
+      @projects = Project.where.not(start_date: nil)
+    elsif params[:state1].present?
+      @projects = Project.where('state = ?', params[:state1])
+    else
+      @projects = Project.all
+    end
   end
-  
 end

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_05_10_020615) do
     t.text "description"
     t.date "start_date"
     t.date "end_date"
-    t.string "state"
+    t.string "state", default: "Proposed"
   end
 
 end

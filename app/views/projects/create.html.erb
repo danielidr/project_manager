@@ -1,17 +1,16 @@
-<div class="container my-4">
-    <% if @project.errors.any? %>
-        <div id="error_explanation">
-            <h2>
-                <%= pluralize(@project.errors.count, "error") %>
+<% if @project.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@project.errors.count, "error") %>
                     prohibited this user from being saved:
-            </h2>
-            <ul>
-            <% @project.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-            </ul>
-        </div>
-    <% else %>
-        <h1>Project saved successfully</h1>
-    <% end %>
-</div>
+        </h2>
+        <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+<% else %>
+    <h1>Project saved successfully</h1>
+<% end %>
+
