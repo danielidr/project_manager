@@ -1,24 +1,26 @@
-<h1 class="mb-4">New Project</h1>
-    <form method="get" action="create">
-    <div class="form-group">
-        <label for="formGroupExampleInput">Name</label>
-        <input name="name" type="text" class="form-control" id="formGroupExampleInput">
-        </div>
+<%= render 'shared/navbar' %>
+    <div class="container">
+        <form method="get" action="create">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="start_date">Start date:</label>
-            <input type="date" id="bday" name="start_date">
-        </div>
-        <div class="form-group">
-            <label for="end_date">End date:</label>
-            <input type="date" id="bday" name="end_date">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">State: </label>
-            <%= select_tag(:state,options_for_select([['Proposed'], ['In progress'], ['Done']], 'Proposed')) %>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-    </form>
+            <label for="formGroupExampleInput">Name</label>
+            <input name="name" type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="start_date">Start date:</label>
+                <input type="date" id="bday" name="start_date">
+            </div>
+            <div class="form-group">
+                <label for="end_date">End date:</label>
+                <input type="date" id="bday" name="end_date">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">State: </label>
+                <%= select_tag(:state,options_for_select([['Proposed'], ['In progress'], ['Done']], 'Proposed')) %>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
